@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Heartland_HomeFinace_ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Heartland_HomeFinace_Project.dbo.Admin_Login' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Admin_Login">
+          <Property Name="UserName" Type="char" MaxLength="20" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="char" MaxLength="20" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Heartland_HomeFinace_Project.dbo.Branch' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="bcode" />
+          </Key>
+          <Property Name="bcode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bname" Type="char" MaxLength="20" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="Phone_no" Type="int" />
+          <Property Name="state" Type="char" MaxLength="20" />
+          <Property Name="city" Type="char" MaxLength="20" />
+          <Property Name="zip_code" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Heartland_HomeFinace_Project.dbo.customer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="cus_id" />
+          </Key>
+          <Property Name="picture" Type="image" />
+          <Property Name="cus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cus_name" Type="char" MaxLength="50" />
+          <Property Name="date_birth" Type="int" />
+          <Property Name="marital" Type="char" MaxLength="20" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="city" Type="char" MaxLength="50" />
+          <Property Name="state" Type="char" MaxLength="50" />
+          <Property Name="Phone_no" Type="int" />
+          <Property Name="zip_code" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Heartland_HomeFinace_Project.dbo.Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Emp_id" />
+          </Key>
+          <Property Name="Emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Emp_name" Type="char" MaxLength="50" />
+          <Property Name="Date_of_birth" Type="int" />
+          <Property Name="Date_of_joint" Type="int" />
+          <Property Name="Application_date" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="40" />
+          <Property Name="city" Type="char" MaxLength="40" />
+          <Property Name="State" Type="char" MaxLength="40" />
+          <Property Name="Designation" Type="char" MaxLength="40" />
+          <Property Name="E_code" Type="int" />
+          <Property Name="Username" Type="char" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="phone_no" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Heartland_HomeFinace_Project.dbo.Loan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Loan">
+          <Key>
+            <PropertyRef Name="l_code" />
+          </Key>
+          <Property Name="lname" Type="char" MaxLength="20" />
+          <Property Name="l_no" Type="int" />
+          <Property Name="l_type" Type="char" MaxLength="20" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="Application_date" Type="int" />
+          <Property Name="Email_address" Type="varchar" MaxLength="40" />
+          <Property Name="grantee_provided" Type="char" MaxLength="40" />
+          <Property Name="Annual_income" Type="int" />
+          <Property Name="Amount_Loan" Type="int" />
+          <Property Name="l_code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Heartland_HomeFinace_Project.dbo.Payment' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Payment">
+          <Property Name="Ref_no" Type="int" />
+          <Property Name="check_no" Type="int" />
+          <Property Name="checkdate" Type="int" />
+          <Property Name="amount" Type="int" />
+        </EntityType>-->
+        <EntityContainer Name="Heartland_HomeFinace_ProjectModelStoreContainer">
+          <EntitySet Name="Branch" EntityType="Self.Branch" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Branch].[bcode] AS [bcode], 
+    [Branch].[bname] AS [bname], 
+    [Branch].[address] AS [address], 
+    [Branch].[Phone_no] AS [Phone_no], 
+    [Branch].[state] AS [state], 
+    [Branch].[city] AS [city], 
+    [Branch].[zip_code] AS [zip_code]
+    FROM [dbo].[Branch] AS [Branch]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="customer" EntityType="Self.customer" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [customer].[picture] AS [picture], 
+    [customer].[cus_id] AS [cus_id], 
+    [customer].[cus_name] AS [cus_name], 
+    [customer].[date_birth] AS [date_birth], 
+    [customer].[marital] AS [marital], 
+    [customer].[address] AS [address], 
+    [customer].[city] AS [city], 
+    [customer].[state] AS [state], 
+    [customer].[Phone_no] AS [Phone_no], 
+    [customer].[zip_code] AS [zip_code]
+    FROM [dbo].[customer] AS [customer]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Employee" EntityType="Self.Employee" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Employee].[Emp_id] AS [Emp_id], 
+    [Employee].[Emp_name] AS [Emp_name], 
+    [Employee].[Date_of_birth] AS [Date_of_birth], 
+    [Employee].[Date_of_joint] AS [Date_of_joint], 
+    [Employee].[Application_date] AS [Application_date], 
+    [Employee].[Address] AS [Address], 
+    [Employee].[city] AS [city], 
+    [Employee].[State] AS [State], 
+    [Employee].[Designation] AS [Designation], 
+    [Employee].[E_code] AS [E_code], 
+    [Employee].[Username] AS [Username], 
+    [Employee].[Password] AS [Password], 
+    [Employee].[Email] AS [Email], 
+    [Employee].[phone_no] AS [phone_no]
+    FROM [dbo].[Employee] AS [Employee]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Loan" EntityType="Self.Loan" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Loan].[lname] AS [lname], 
+    [Loan].[l_no] AS [l_no], 
+    [Loan].[l_type] AS [l_type], 
+    [Loan].[address] AS [address], 
+    [Loan].[Application_date] AS [Application_date], 
+    [Loan].[Email_address] AS [Email_address], 
+    [Loan].[grantee_provided] AS [grantee_provided], 
+    [Loan].[Annual_income] AS [Annual_income], 
+    [Loan].[Amount_Loan] AS [Amount_Loan], 
+    [Loan].[l_code] AS [l_code]
+    FROM [dbo].[Loan] AS [Loan]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Heartland_HomeFinace_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="bcode" />
+          </Key>
+          <Property Name="bcode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bname" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone_no" Type="Int32" />
+          <Property Name="state" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="zip_code" Type="Int32" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="cus_id" />
+          </Key>
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="cus_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cus_name" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="date_birth" Type="Int32" />
+          <Property Name="marital" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="Phone_no" Type="Int32" />
+          <Property Name="zip_code" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Emp_id" />
+          </Key>
+          <Property Name="Emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_name" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="Date_of_birth" Type="Int32" />
+          <Property Name="Date_of_joint" Type="Int32" />
+          <Property Name="Application_date" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="Designation" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="E_code" Type="Int32" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone_no" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Loan">
+          <Key>
+            <PropertyRef Name="l_code" />
+          </Key>
+          <Property Name="lname" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="l_no" Type="Int32" />
+          <Property Name="l_type" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Application_date" Type="Int32" />
+          <Property Name="Email_address" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="grantee_provided" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="Annual_income" Type="Int32" />
+          <Property Name="Amount_Loan" Type="Int32" />
+          <Property Name="l_code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="Heartland_HomeFinace_ProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Branches" EntityType="Self.Branch" />
+          <EntitySet Name="customers" EntityType="Self.customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Loans" EntityType="Self.Loan" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Heartland_HomeFinace_ProjectModelStoreContainer" CdmEntityContainer="Heartland_HomeFinace_ProjectEntities">
+          <EntitySetMapping Name="Branches">
+            <EntityTypeMapping TypeName="Heartland_HomeFinace_ProjectModel.Branch">
+              <MappingFragment StoreEntitySet="Branch">
+                <ScalarProperty Name="bcode" ColumnName="bcode" />
+                <ScalarProperty Name="bname" ColumnName="bname" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customers">
+            <EntityTypeMapping TypeName="Heartland_HomeFinace_ProjectModel.customer">
+              <MappingFragment StoreEntitySet="customer">
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="cus_id" ColumnName="cus_id" />
+                <ScalarProperty Name="cus_name" ColumnName="cus_name" />
+                <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+                <ScalarProperty Name="marital" ColumnName="marital" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+                <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="Heartland_HomeFinace_ProjectModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Emp_id" ColumnName="Emp_id" />
+                <ScalarProperty Name="Emp_name" ColumnName="Emp_name" />
+                <ScalarProperty Name="Date_of_birth" ColumnName="Date_of_birth" />
+                <ScalarProperty Name="Date_of_joint" ColumnName="Date_of_joint" />
+                <ScalarProperty Name="Application_date" ColumnName="Application_date" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="E_code" ColumnName="E_code" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loans">
+            <EntityTypeMapping TypeName="Heartland_HomeFinace_ProjectModel.Loan">
+              <MappingFragment StoreEntitySet="Loan">
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="l_no" ColumnName="l_no" />
+                <ScalarProperty Name="l_type" ColumnName="l_type" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="Application_date" ColumnName="Application_date" />
+                <ScalarProperty Name="Email_address" ColumnName="Email_address" />
+                <ScalarProperty Name="grantee_provided" ColumnName="grantee_provided" />
+                <ScalarProperty Name="Annual_income" ColumnName="Annual_income" />
+                <ScalarProperty Name="Amount_Loan" ColumnName="Amount_Loan" />
+                <ScalarProperty Name="l_code" ColumnName="l_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

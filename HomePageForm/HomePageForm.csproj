@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{432A6CB7-034C-4C19-B523-F1A72099C38B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HomePageForm</RootNamespace>
+    <AssemblyName>HomePageForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="metroframework">
+      <HintPath>..\..\..\..\..\Desktop\Document\metro\metroframework.dll</HintPath>
+    </Reference>
+    <Reference Include="metroframework.design">
+      <HintPath>..\..\..\..\..\Desktop\Document\metro\metroframework.design.dll</HintPath>
+    </Reference>
+    <Reference Include="metroframework.fonts">
+      <HintPath>..\..\..\..\..\Desktop\Document\metro\metroframework.fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About form.Designer.cs">
+      <DependentUpon>About form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abranch details reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abranch details reg.Designer.cs">
+      <DependentUpon>Abranch details reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abranch form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abranch form.Designer.cs">
+      <DependentUpon>Abranch form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acustomer detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acustomer detail.Designer.cs">
+      <DependentUpon>Acustomer detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin page.Designer.cs">
+      <DependentUpon>Admin page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin reg form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin reg form.Designer.cs">
+      <DependentUpon>Admin reg form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin report fill form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin report fill form.Designer.cs">
+      <DependentUpon>Admin report fill form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aemploye details form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aloan details reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aloan details reg.Designer.cs">
+      <DependentUpon>Aloan details reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Amessanger form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Amessanger form.Designer.cs">
+      <DependentUpon>Amessanger form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apayment reg form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apayment reg form.Designer.cs">
+      <DependentUpon>Apayment reg form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch Form.Designer.cs">
+      <DependentUpon>Branch Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Eenter login id form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eenter login id form.Designer.cs">
+      <DependentUpon>Eenter login id form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ereport form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ereport form.Designer.cs">
+      <DependentUpon>Ereport form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eview forms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eview forms.Designer.cs">
+      <DependentUpon>Eview forms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ebranch view form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ebranch view form.Designer.cs">
+      <DependentUpon>Ebranch view form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ecustomer app form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecustomer app form.Designer.cs">
+      <DependentUpon>Ecustomer app form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employe Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employe Login.Designer.cs">
+      <DependentUpon>Employe Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employe page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employe page.Designer.cs">
+      <DependentUpon>Employe page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eview_form.cs" />
+    <Compile Include="heartLand_projectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>heartLand_projectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="heartLand_projectDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>heartLand_projectDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Home loan Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home loan Details.Designer.cs">
+      <DependentUpon>Home loan Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loan Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan Form.Designer.cs">
+      <DependentUpon>Loan Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loan Program form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loan Program form.Designer.cs">
+      <DependentUpon>Loan Program form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Form.Designer.cs">
+      <DependentUpon>Payment Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Picture1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Picture1.Designer.cs">
+      <DependentUpon>Picture1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homeform.Designer.cs">
+      <DependentUpon>Homeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Photos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Photos.Designer.cs">
+      <DependentUpon>Photos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Picture2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Picture2.Designer.cs">
+      <DependentUpon>Picture2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sbranch form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sbranch form.Designer.cs">
+      <DependentUpon>Sbranch form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scustomer form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scustomer form.Designer.cs">
+      <DependentUpon>Scustomer form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scustomer view form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scustomer view form.Designer.cs">
+      <DependentUpon>Scustomer view form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scus view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scus view.Designer.cs">
+      <DependentUpon>Scus view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Semploye Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Semploye Form.Designer.cs">
+      <DependentUpon>Semploye Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Senior Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senior Management.Designer.cs">
+      <DependentUpon>Senior Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Senior reg form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senior reg form.Designer.cs">
+      <DependentUpon>Senior reg form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seniorman page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seniorman page.Designer.cs">
+      <DependentUpon>Seniorman page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Senter login id form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senter login id form.Designer.cs">
+      <DependentUpon>Senter login id form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sloan form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sloan form.Designer.cs">
+      <DependentUpon>Sloan form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sloanprogram from.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sloanprogram from.Designer.cs">
+      <DependentUpon>Sloanprogram from.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spayment form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spayment form.Designer.cs">
+      <DependentUpon>Spayment form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sreport form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sreport form.Designer.cs">
+      <DependentUpon>Sreport form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sview Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sview Form.Designer.cs">
+      <DependentUpon>Sview Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Datails form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Datails form.Designer.cs">
+      <DependentUpon>View Datails form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About form.resx">
+      <DependentUpon>About form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abranch details reg.resx">
+      <DependentUpon>Abranch details reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abranch form.resx">
+      <DependentUpon>Abranch form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acustomer detail.resx">
+      <DependentUpon>Acustomer detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin page.resx">
+      <DependentUpon>Admin page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin reg form.resx">
+      <DependentUpon>Admin reg form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin report fill form.resx">
+      <DependentUpon>Admin report fill form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aemploye details form.resx">
+      <DependentUpon>Aemploye details form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aloan details reg.resx">
+      <DependentUpon>Aloan details reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amessanger form.resx">
+      <DependentUpon>Amessanger form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apayment reg form.resx">
+      <DependentUpon>Apayment reg form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch Form.resx">
+      <DependentUpon>Branch Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eenter login id form.resx">
+      <DependentUpon>Eenter login id form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ereport form.resx">
+      <DependentUpon>Ereport form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eview forms.resx">
+      <DependentUpon>Eview forms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ebranch view form.resx">
+      <DependentUpon>Ebranch view form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ecustomer app form.resx">
+      <DependentUpon>Ecustomer app form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employe Login.resx">
+      <DependentUpon>Employe Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employe page.resx">
+      <DependentUpon>Employe page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home loan Details.resx">
+      <DependentUpon>Home loan Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan Form.resx">
+      <DependentUpon>Loan Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loan Program form.resx">
+      <DependentUpon>Loan Program form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Form.resx">
+      <DependentUpon>Payment Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Picture1.resx">
+      <DependentUpon>Picture1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homeform.resx">
+      <DependentUpon>Homeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Photos.resx">
+      <DependentUpon>Photos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Picture2.resx">
+      <DependentUpon>Picture2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sbranch form.resx">
+      <DependentUpon>Sbranch form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scustomer form.resx">
+      <DependentUpon>Scustomer form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scustomer view form.resx">
+      <DependentUpon>Scustomer view form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scus view.resx">
+      <DependentUpon>Scus view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Semploye Form.resx">
+      <DependentUpon>Semploye Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senior Management.resx">
+      <DependentUpon>Senior Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senior reg form.resx">
+      <DependentUpon>Senior reg form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seniorman page.resx">
+      <DependentUpon>Seniorman page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senter login id form.resx">
+      <DependentUpon>Senter login id form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sloan form.resx">
+      <DependentUpon>Sloan form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sloanprogram from.resx">
+      <DependentUpon>Sloanprogram from.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spayment form.resx">
+      <DependentUpon>Spayment form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sreport form.resx">
+      <DependentUpon>Sreport form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sview Form.resx">
+      <DependentUpon>Sview Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Datails form.resx">
+      <DependentUpon>View Datails form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Abranchlist.Designer.form" />
+    <None Include="Abranchlist.form">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram3.cd" />
+    <None Include="heartLand_projectDataSet.xsc">
+      <DependentUpon>heartLand_projectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="heartLand_projectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>heartLand_projectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="heartLand_projectDataSet.xss">
+      <DependentUpon>heartLand_projectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="heartLand_projectDataSet1.xsc">
+      <DependentUpon>heartLand_projectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="heartLand_projectDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>heartLand_projectDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="heartLand_projectDataSet1.xss">
+      <DependentUpon>heartLand_projectDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
